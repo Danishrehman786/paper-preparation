@@ -13,10 +13,10 @@ def DHT11_data():
 
 def upload_data(value1,value2):
     link = 'https://api.thingspeak.com/update?api_key=3S03GVW04QIH5LR9&field1=0'+value1+'&field2='+value2
-        http = urllib3.PoolManager()
-        r = http.request('GET',link)
-        print (r.status)
-        sleep(2)
+    http = urllib3.PoolManager()
+    r = http.request('GET',link)
+    print (r.status)
+    sleep(2)
 
 while True:
     try:
